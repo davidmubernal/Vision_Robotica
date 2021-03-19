@@ -4,6 +4,8 @@ Para la realización de las prácticas necesitamos seguir un proceso de instalac
 
 1. Descarga de [Docker](https://docs.docker.com/get-docker/)
 
+   * En Windows es necesario descargar una actualización para sistemas WLS según la documentación de [Windows](https://docs.microsoft.com/es-es/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package). Se puede descargar el archivo de forma directa desde [este enlace](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
 2. Clonar el repositorio que contiene el Docker desde el siguiente enlace del github de __JdeRobot__. Para ello accede desde la _terminal_ o _símbolo del sistema_ si a la dirección donde quieras almacenar el repositorio e introduce el siguiente comando: 
 
    ```
