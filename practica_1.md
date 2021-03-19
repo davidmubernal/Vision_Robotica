@@ -1,6 +1,6 @@
 # Práctica 1 - Seguimiento de línea
 
-El objetivo de la práctica es la realización de un formula 1 robótico que recorra un circuito dado siguiendo una línea roja dada. Para realizar la práctica es necesario seguir la [guía de instalación](instalation.md) además de tener un equipo con potencia suficiente para ejecutar [Gazebo](http://gazebosim.org/). Los datos que se muestran en esta práctica se han obtenido con un _i7-8700K a 4,7Ghz con 6 núcleos/12hilos_.
+El objetivo de la práctica es la realización de un formula 1 robótico que recorra un circuito dado siguiendo una línea roja dada. Para realizar la práctica es necesario seguir la [guía de instalación](instalation.md) además de tener un equipo con potencia suficiente para ejecutar [Gazebo](http://gazebosim.org/). Los datos que se muestran en esta práctica se han obtenido con un procesador _i7-8700K a 4,7Ghz con 6 núcleos/12hilos_.
 
 ## Primeros pasos
 
@@ -75,9 +75,9 @@ Para calcular el ángulo de giro que debe realizar el coche se debe calcular la 
 
 ![pendiente de una recta](img/practica_1/pendiente.svg)
 
-> pendiente de la recta: m = (y_2-y_1)/(x_2-x_1)
+> (1) Pendiente de la recta: m = (y_2-y_1)/(x_2-x_1)
 > 
-> ángulo de la recta con la horizontal:&#593; =arctg(m)
+> (2) Ángulo de la recta con la horizontal:&#593; =arctg(m)
 
 
 Aplicando las ecuaciones (1) y (2) se consigue el ángulo &#593;. Este ángulo será el giro que debe efectuar el vehículo. Por ejemplo, en la siguiente curva, se vería el ángulo &#593; representado.
@@ -101,7 +101,7 @@ giro = Kp * alpha
 Se debe ir modificando el valor de __Kp__ hasta conseguir un valor que permita completar una vuelta al circuito, para ello hay que tener en cuenta:
 
 * Valores de _Kp_ elevados harán un control muy brusco y por tanto el vehículo oscilará sobre la línea.
-* Valores de _Kp_ bajos harán un control muy suave y, por tanto, el vehículo tardará mucho en 
+* Valores de _Kp_ bajos harán un control muy suave y, por tanto, el vehículo tardará mucho en llegar a la línea.
 
 Con este sistema tan sencillo se puede dar una vuelta completa al circuito a velocidades bajas.
 
@@ -115,7 +115,7 @@ giro = Kp * alpha + Kd * (alpha - alpha_last)
 
 #### Control proporcional de la velocidad
 
-Una vez conseguido un sistema de control de giro, en vistas a mejorar el tiempo por vuelta, se va a realizar un pequeño control proporciona de la velocidad. Este control proporcional disminuirá la velocidad en función del ángulo girado de forma qué a mayor giro menor velocidad.
+Una vez conseguido un sistema de control de giro, en vistas a mejorar el tiempo por vuelta, se va a realizar un pequeño control proporcional de la velocidad. Este control proporcional disminuirá la velocidad en función del ángulo girado de forma qué a mayor giro menor velocidad.
 
 ```python
 velocidad = velocidad_maxima - Kp_v * alpha
@@ -199,7 +199,7 @@ Es más estable con una velocidad de 0.7 aunque supone aumentar el tiempo por vu
 
 Si se sube la velocidad a `1`y se baja la cte Kp a `0.001` el sistema es capaz de recuperar, aunque se separa de la línea demasiado durante las curvas. Con estos valores se consigue un tiempo de `1min 36sy 1min 39s `.
 
-Viendo que la mejora al tocar la cte Kp es notable se prueba con un valor de `0.0025`. Con este valor y una velocidad de `1` se consigue una mantener el coche con mayor estabilidad sobre la línea roja, aunque el tiempo apenas varía (`1min 35s`).
+Viendo que la mejora al tocar la cte Kp es notable se prueba con un valor de `0.0025`. Con este valor y una velocidad de `1` se consigue mantener el coche con mayor estabilidad sobre la línea roja, aunque el tiempo apenas varía (`1min 35s`).
 
 
 
@@ -233,11 +233,11 @@ Se ha visto una forma de modelar el problema, pero llegados a este punto surge l
 
 ![pendiente de una recta](img/practica_1/pendiente.svg)
 
-Se puede obtener el ángulo &alpha por medio de la pendiente de la recta. Para ello hay que aplicar las siguientes ecuaciones:
+Se puede obtener el ángulo &#593; por medio de la pendiente de la recta. Para ello hay que aplicar las siguientes ecuaciones:
 
-> pendiente de la recta: m = (y_2-y_1) / (x_2-x_1)
+> (1) Pendiente de la recta: m = (y_2-y_1) / (x_2-x_1)
 >
-> ángulo de la recta con la horizontal: &#593; = arctg(m)
+> (2) Ángulo de la recta con la horizontal: &#593; = arctg(m)
 
 Esta idea se puede aplicar al problema con unos pequeños cambios, ya que el origen de giro debe estar en el eje y, en lugar del eje x. Se puede ver esta idea aplicada en la siguiente imagen.
 
