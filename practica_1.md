@@ -63,7 +63,7 @@ Como se aprecia en la imagen, los valores dentro del rango son de color blanco, 
 
 ![image-20210319133713276](img/practica_1/centroide_linea.png)
 
-Se llega a la idea de aplicar la detección de contorno sólo en una franja cercana al horizonte. En concreto se calcula el contorno al 45% &mnplus;3px de la altura total desde la parte inferior, es importante recordar que las imágenes tienen su origen en la esquina superior izquierda. De esta forma se consigue un centroide de la línea en una posición alejada
+Se llega a la idea de aplicar la detección de contorno sólo en una franja cercana al horizonte. En concreto se calcula el contorno al 45% &mnplus; 3px de la altura total desde la parte inferior, es importante recordar que las imágenes tienen su origen en la esquina superior izquierda. De esta forma se consigue un centroide de la línea en una posición alejada
 
 ![image-20210319133630541](img/practica_1/centroide_franja.png)
 
