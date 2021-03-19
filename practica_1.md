@@ -63,7 +63,7 @@ Como se aprecia en la imagen, los valores dentro del rango son de color blanco, 
 
 ![image-20210319133713276](img/practica_1/centroide_linea.png)
 
-Se llega a la idea de aplicar la detección de contorno sólo en una franja cercana al horizonte. En concreto se calcula el contorno al 45% $\pm 3px$ de la altura total desde la parte inferior, es importante recordar que las imágenes tienen su origen en la esquina superior izquierda. De esta forma se consigue un centroide de la línea en una posición alejada
+Se llega a la idea de aplicar la detección de contorno sólo en una franja cercana al horizonte. En concreto se calcula el contorno al 45% &mnplus;3px de la altura total desde la parte inferior, es importante recordar que las imágenes tienen su origen en la esquina superior izquierda. De esta forma se consigue un centroide de la línea en una posición alejada
 
 ![image-20210319133630541](img/practica_1/centroide_franja.png)
 
@@ -74,15 +74,13 @@ Para realizar el control del giro del vehículo se debe tener en cuenta cuanto d
 Para calcular el ángulo de giro que debe realizar el coche se debe calcular la pendiente entre dos puntos. El primer punto será un punto fijo de la imagen, este será la referencia a nuestro vehículo. El segundo punto será el centroide de la recta. 
 
 ![pendiente de una recta](img/practica_1/pendiente.svg)
-$$
-\text{pendiente de la recta: } m =\frac{y_2-y_1}{x_2-x_1}
-$$
 
-$$
-\text{ángulo de la recta con la horizontal: } \alpha =arctg(m)
-$$
+> pendiente de la recta: m = (y_2-y_1)/(x_2-x_1)
+> 
+> ángulo de la recta con la horizontal:&#593; =arctg(m)
 
-Aplicando las ecuaciones (1) y (2) se consigue el ángulo $\alpha$. Este ángulo será el giro que debe efectuar el vehículo. Por ejemplo, en la siguiente curva, se vería el ángulo $\alpha$ representado.
+
+Aplicando las ecuaciones (1) y (2) se consigue el ángulo &#593;. Este ángulo será el giro que debe efectuar el vehículo. Por ejemplo, en la siguiente curva, se vería el ángulo &#593; representado.
 
 
 
@@ -235,11 +233,12 @@ Se ha visto una forma de modelar el problema, pero llegados a este punto surge l
 
 ![pendiente de una recta](img/practica_1/pendiente.svg)
 
-Se puede obtener el ángulo $\alpha$ por medio de la pendiente de la recta. Para ello hay que aplicar las siguientes ecuaciones:
-$$
-\text{pendiente de la recta: } m =\frac{y_2-y_1}{x_2-x_1} \\
-\text{ángulo de la recta con la horizontal: } \alpha =arctg(m)
-$$
+Se puede obtener el ángulo &alpha por medio de la pendiente de la recta. Para ello hay que aplicar las siguientes ecuaciones:
+
+> pendiente de la recta: m = (y_2-y_1) / (x_2-x_1)
+>
+> ángulo de la recta con la horizontal: &#593; = arctg(m)
+
 Esta idea se puede aplicar al problema con unos pequeños cambios, ya que el origen de giro debe estar en el eje y, en lugar del eje x. Se puede ver esta idea aplicada en la siguiente imagen.
 
 ![representacion](img/practica_1/representacion.svg)
