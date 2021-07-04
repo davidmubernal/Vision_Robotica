@@ -6,7 +6,7 @@ Para la realización de las prácticas necesitamos seguir un proceso de instalac
 
    * En Windows es necesario descargar una actualización para sistemas WLS según la documentación de [Windows](https://docs.microsoft.com/es-es/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package). Se puede descargar el archivo de forma directa desde [este enlace](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
-2. Clonar el repositorio que contiene el Docker desde el siguiente enlace del github de __JdeRobot__. Para ello accede desde la _terminal_ o _símbolo del sistema_ si a la dirección donde quieras almacenar el repositorio e introduce el siguiente comando: 
+2. Clonar el repositorio que contiene el Docker desde el siguiente enlace del github de __JdeRobot__. Para ello accede desde la _terminal_ o _símbolo del sistema_ a la dirección donde quieras almacenar el repositorio e introduce el siguiente comando: 
 
    ```
    git clone https://github.com/JdeRobot/RoboticsAcademy
@@ -18,7 +18,7 @@ Para la realización de las prácticas necesitamos seguir un proceso de instalac
    docker pull jderobot/robotics-academy
    ```
 
-4. Fijar la dirección IP en el archivo `websocker_addess.js` que se encuentra en la ruta: `RoboticsAcademy/exercises/follow_line/web-template\assets`. Dentro de este archivo debemos modificar el valor de la `websocket_address`.Esta dependerá del sistema operativo:
+4. Fijar la dirección IP en el archivo `websocker_addess.js` que se encuentra en la ruta: `RoboticsAcademy/exercises/follow_line/web-template\assets`. Dentro de este archivo debemos modificar el valor de la variable `websocket_address`. Esta dependerá del sistema operativo:
 
    * Linux: 127.0.0.1
    * Windows: 192.168.99.100
@@ -35,5 +35,5 @@ Una vez realizado este proceso podemos empezar con la realización de las distin
 
 Adicionalmente, si se quiere habilitar el renderizado en Windows por GPU Nvidia se debe hacer el proceso detallada en [esta página](https://www.docker.com/blog/wsl-2-gpu-support-is-here/).
 
-> La necesidad de tener instalador Windows en el anillo Insider a sido el motivo principal para no realizar esta configuración en mi equipo. El programa Insider en su rama DEV puede suponer pequeñas inestabilidades en el sistema operativo.
+> La necesidad de tener instalador Windows en el anillo Insider ha sido el motivo principal para no realizar esta configuración en mi equipo. El programa Insider en su rama DEV puede suponer pequeñas inestabilidades en el sistema operativo.
 
