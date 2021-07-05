@@ -65,10 +65,12 @@ Primeramente se deben preprocesar las imágenes para obtener los bordes de estas
 Se calcular la retroproyección de todos los puntos que son borde. Para ello se comprueba si el pixel es borde o no. En caso de ser borde se calcula se transforma el pixel de las coordenadas de la imagen (píxeles) a las coordenadas de la cámara. Cuando se tiene el pixel en coordenadas de la cámara se realiza la retroproyección y se obtiene un punto 3D. 
 
 Con este punto 3D y la posición de la cámara se puede calcular el vector director de la recta de retroproyección. La recta de retroproyección tendrá la forma
-$$
+
+```math
 p = (point3d_{backpropagate} - pos_{camara})*alpha + pos_{camara}
-$$
-Siendo $point3d_{backpropagate}$ el punto 3d calculado con la retroproyección, $pos_{camara}$ la posición de la cámara a la que pertenece el pixel y alpha un multiplicador del vector director.
+```
+
+Siendo `point3d_{backpropagate}` el punto 3d calculado con la retroproyección, `pos_{camara}` la posición de la cámara a la que pertenece el pixel y `alpha` un multiplicador del vector director.
 
 Dada esta recta se calculan dos puntos de la misma. Estos dos puntos se proyectan sobre la otra cámara obteniendo la __recta de retroproyección__. Una vez se tienen las proyecciones de los puntos en la cámara derecha se deben pasar de las coordenadas de la cámara a coordenadas de la imagen (píxeles). Con los puntos de la retroproyección en la imagen se calcula la recta de retroproyección. A esta recta se le denomina __recta epipolar__. Esta recta epipolar tendrá el grosor del parche. 
 
