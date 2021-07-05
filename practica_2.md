@@ -98,7 +98,7 @@ Primeramente se obtenían los siguientes resultados que, como se ve, realizan un
 
 ![image-20210704020904962](img/practica_2/intento_1.png)
 
-Si se realiza el cambio y se computa se obtiene los siguientes resultados. La reconstrucción tiene un tamaño pequeño, pero reproduce correctamente la escena. sin perder mucho detalle.
+Si se realiza el cambio y se computa se obtiene los siguientes resultados. La reconstrucción tiene un tamaño pequeño pero reproduce correctamente la escena sin perder mucho detalle.
 
 ![image-20210704135208850](img/practica_2/intento_2.1.png)
 
